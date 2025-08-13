@@ -9,7 +9,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "http://localhost:5173", allowedHeaders = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT})
 @RestController
 @RequestMapping("/files")
 @Tag(name = "File Operations", description = "Endpoints for uploading files and retrieving file metadata")
@@ -31,4 +31,13 @@ public class FileController {
     public List<FileDetails> getAllFiles() {
         return fileService.getAllFiles();
     }
+
+    @Operation(summary = "Update file name", description = "Renames a stored file both in the file system and DB")
+    @PutMapping("/{id}")
+    public FileDetails updateFileName(
+            @PathVariable Long id,
+        @RequestBody FileRenameRequest request) throws Exception {
+        return fileService.updateFileName(id, request.getFileName());
+    }
+
 }

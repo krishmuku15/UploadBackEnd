@@ -1,5 +1,0 @@
-com\example\fileuploader\service\FileService.class
-com\example\fileuploader\repository\FileDetailsRepository.class
-com\example\fileuploader\model\FileDetails.class
-com\example\fileuploader\controller\FileController.class
-com\example\fileuploader\FileUploaderApplication.class
