@@ -34,7 +34,7 @@ src/main/java/com/example/filedemo/
 
 ## 🚀 Build & Run
 
-### **1️⃣ Prerequisites**
+### **1 Prerequisites**
 - Install **Java 17** or higher
 - Install **Maven 3.8+**
 - (Optional) Install an IDE like IntelliJ or Eclipse
@@ -42,7 +42,7 @@ src/main/java/com/example/filedemo/
 
 ---
 
-### **3️⃣ Configure Storage Path**
+### **2 Configure Storage Path**
 Edit `application.properties`:
 ```properties
 # H2 Database Configuration
@@ -59,14 +59,14 @@ file.storage.path=/absolute/path/to/storage/folder
 
 ---
 
-### **4️⃣ Build**
+### **3 Build**
 ```bash
 mvn clean install
 ```
 
 ---
 
-### **5️⃣ Run**
+### **4 Run**
 ```bash
 mvn spring-boot:run
 ```
@@ -77,7 +77,7 @@ java -jar target/filedemo-0.0.1-SNAPSHOT.jar
 
 ---
 
-### **6️⃣ API Endpoints**
+### **5 API Endpoints**
 | Method | Endpoint            | Description |
 |--------|---------------------|-------------|
 | POST   | `/files/upload`     | Upload a file (image/video only) |
@@ -86,7 +86,7 @@ java -jar target/filedemo-0.0.1-SNAPSHOT.jar
 
 ---
 
-### **7️⃣ Access H2 Database Console**
+### **6 Access H2 Database Console**
 - URL: `http://localhost:8080/h2-console`
 - JDBC URL: `jdbc:h2:mem:filedb`
 - User: `sa`
